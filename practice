@@ -1,0 +1,172 @@
+package practice;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Start {
+	public static void main(String[] args) {
+		
+		System.out.println("1. play");
+		System.out.println("2. exit");
+		
+		Scanner myObj = new Scanner(System.in);
+		System.out.print("input menu: ");
+		int menu = myObj.nextInt();
+		
+		if(menu == 1) {
+			// random bot
+			Random bot = new Random();
+			int index = bot.nextInt(3);
+			//List<String> objek = new ArrayList<>();
+			
+//			objek.add("batu");
+//			objek.add("gunting");
+//			objek.add("kertas");
+//			String computer = objek.get(index);
+			
+			String computer = "  ";
+			if(index == 0 ) {
+				computer =  "batu";
+			}
+			if(index == 1) {
+				computer = "gunting";
+			}
+			if(index == 2) {
+				computer = "kertas";
+			}
+		
+			
+			
+			//input user
+			Scanner myObj2 = new Scanner(System.in);
+			System.out.print("input object: ");
+			String input = myObj2.nextLine();
+			System.out.println(input + " versus " + computer);
+			
+			check(input, index);
+			
+			
+		}
+	}
+	public static void check(String input, int index ) {
+		
+		if (input.equalsIgnoreCase("batu")) {
+			if(index == 0) {
+				System.out.println("draw");
+			}
+			if(index == 1) {
+				System.out.println("win");
+			}
+			if(index == 2) {
+				System.out.println("lose");
+			}
+		}
+		if (input.equalsIgnoreCase("gunting")) {
+			if(index == 0) {
+				System.out.println("lose");
+			}
+			if(index == 1) {
+				System.out.println("draw");
+			}
+			if(index == 2) {
+				System.out.println("win");
+			}
+		}
+		if (input.equalsIgnoreCase("kertas")) {
+			if(index == 0) {
+				System.out.println("win");
+			}
+			if(index == 1) {
+				System.out.println("lose");
+			}
+			if(index == 2) {
+				System.out.println("draw");
+			}
+		}
+		
+	}
+//		while(true) {
+//			System.out.println("1. tambah");
+//			System.out.println("2. kurang");
+//			System.out.println("3. kali");
+//			System.out.println("4. bagi");
+//			System.out.println("5. exit");
+//			
+//			float total = 0;
+//			
+//			Scanner myObj = new Scanner(System.in);
+//			System.out.print("input menu: ");
+	
+//			int menu = myObj.nextInt();
+//			if (menu ==5) {
+//				break;
+//			}
+//		
+//			System.out.print("angka1: ");
+//			int angka1= myObj.nextInt();
+//			
+//			System.out.print("angka2: ");
+//			int angka2 = myObj.nextInt();
+//			
+//			total= check(angka1, angka2, menu);
+//			System.out.println("hasil: "+ total);
+//		}
+//		while (i<5) {
+//			System.out.println("hi");
+//			i++;
+//		}
+//		do {
+//			i++;
+//			System.out.println("hi");
+//		}
+//		while(i<5);
+//		for (int i = 0; i < 5; i++) {
+//			for (int j=0; j<= i; j++) {
+//				System.out.print(" ");
+//			}
+//			for(int k=0; k <5; k++ ) {
+//				System.out.println("*");
+//			}
+//		}
+//	}
+////}
+//		for (int i = 5; i > 0; i--) {
+//			for (int j= 1; j<=i; j++) {
+//				System.out.print(" ");
+//			}
+//			for(int k=5; k >= i; k--) {
+//				System.out.print("*");	
+//			}
+//			System.out.println(" ");
+//		}
+//	}
+//	}
+	
+
+//	public static float check(int angka1, int angka2, int menu) {
+//		float total = 0;
+//		if (menu == 1) {
+//			 total= angka1+angka2;
+//			 
+//		}
+//		
+//		if (menu == 2) {
+//			total = angka1-angka2;
+//		}
+//		
+//		if (menu ==3) {
+//			 total = angka1*angka2;
+//		}
+//		
+//		if (menu ==4) {
+//			total = (float)angka1 / (float)angka2;
+//		}
+//		return total;
+//	}
+	
+			
+	
+}
