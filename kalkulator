@@ -1,0 +1,63 @@
+package project;
+
+import java.util.Scanner;
+
+public class Kalkulator {
+	//constructor
+	public Kalkulator(int a) {
+		super();
+		System.out.println(a);
+		runProject();
+		// TODO Auto-generated constructor stub
+	}
+
+	public void runProject() {
+		while(true) {
+			System.out.println("1. tambah");
+			System.out.println("2. kurang");
+			System.out.println("3. kali");
+			System.out.println("4. bagi");
+			System.out.println("5. exit");
+			
+			float total = 0;
+			
+			Scanner myObj = new Scanner(System.in);
+			System.out.print("input menu: ");
+
+			int menu = myObj.nextInt();
+			if (menu ==5) {
+				break;
+			}
+		
+			System.out.print("angka1: ");
+			int angka1= myObj.nextInt();
+			
+			System.out.print("angka2: ");
+			int angka2 = myObj.nextInt();
+			
+			total= check(angka1, angka2, menu);
+			System.out.println("hasil: "+ total);
+		}
+	}
+	
+	public float check(int angka1, int angka2, int menu) {
+		float total = 0;
+		if (menu == 1) {
+			 total= angka1+angka2;
+			 
+		}
+		
+		if (menu == 2) {
+			total = angka1-angka2;
+		}
+		
+		if (menu ==3) {
+			 total = angka1*angka2;
+		}
+		
+		if (menu ==4) {
+			total = (float)angka1 / (float)angka2;
+		}
+		return total;
+	}
+}
